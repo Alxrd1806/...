@@ -1,0 +1,279 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #121212; 
+    color: #FFFFFF; 
+    min-height: 100vh;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+header {
+    background: #1E1E1E; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #D4AF37; 
+}
+
+.logo {
+    color: #D4AF37; 
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #FFFFFF;
+}
+
+nav button {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #D4AF37;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav button:hover, 
+nav button.active {
+    background: #D4AF37; 
+    color: #121212;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+h3 {
+    margin: 20px 0 10px 0;
+    font-size: 16px;
+    color: #D4AF37;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card {
+    background: #1E1E1E; 
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.stats {
+    text-align: center;
+    font-size: 32px;
+    color: #D4AF37;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+
+.quick-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    background: #292929; 
+    color: #FFFFFF;
+    border: 1px solid #3d3d3d;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #D4AF37; 
+}
+
+
+.selector-material-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.selector-material-group select {
+    flex: 1;
+}
+
+
+button.action {
+    background: #D4AF37;
+    color: #121212;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button.action:hover {
+    background: #bfa032;
+    transform: translateY(-2px);
+}
+
+button.action:active {
+    transform: translateY(0);
+}
+
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+
+.material {
+    background: #292929;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 12px;
+    border-left: 4px solid #D4AF37; 
+}
+
+
+.material-grid {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr) auto;
+    gap: 10px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.material-grid label {
+    font-size: 12px;
+    color: #aaaaaa;
+    display: flex;
+    flex-direction: column;
+}
+
+.material-grid input {
+    margin: 4px 0 0 0;
+    padding: 8px;
+}
+
+.btn-eliminar-mat {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+
+.resultado {
+    background: #D4AF37; 
+    color: #121212;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+.resultado p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 8px 0;
+    font-weight: 400;
+    border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+    padding-bottom: 4px;
+}
+
+.resultado p:last-child {
+    border-bottom: none;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 5px;
+}
+
+/* ==========================================================================
+   7. SECCIÓN DE INSTRUCCIONES PWA
+   ========================================================================== */
+.pwa-instructions {
+    background: #292929;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.pwa-instructions ol {
+    margin-left: 20px;
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+
+    .cards {
+        grid-template-columns: 1fr; 
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .quick-actions, .form-actions {
+        flex-direction: column;
+    }
+
+    .material-grid {
+        grid-template-columns: 1fr 1fr; /
+    
+    .btn-eliminar-mat {
+        grid-column: span 2;
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COSTE JANANDRED</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2422/2422796.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            COSTE <span>JANANDRED</span>
+        </div>
+        <nav>
+            <button id="btn-inicio">Inicio</button>
+            <button id="btn-crear">Nueva Creación</button>
+            <button id="btn-historial">Historial</button>
+            <button id="btn-config">Configuración</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Panel Principal</h2>
+            <div class="cards">
+                <div class="card">
+                    Total Pedidos
+                    <h1 id="totalPedidos" class="stats">0</h1>
+                </div>
+                <div class="card">
+                    Total Ventas
+                    <h1 id="ventas" class="stats">$0.00</h1>
+                </div>
+                <div class="card">
+                    Total Ganancias
+                    <h1 id="ganancias" class="stats">$0.00</h1>
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <button class="action" id="quick-crear">⚡ Nueva Creación</button>
+                <button class="action" id="quick-historial">📂 Ver Historial</button>
+            </div>
+        </section>
+
+        <section id="crear" class="hidden">
+            <div class="card">
+                <h2>Nueva Creación</h2>
+                
+                <input type="text" id="cliente" placeholder="Cliente">
+                <input type="text" id="producto" placeholder="Producto">
+                <input type="date" id="fecha">
+
+                <h3>Plantillas</h3>
+                <select id="plantilla">
+                    <option value="">Seleccione una plantilla (Opcional)</option>
+                    <option value="caja-premium">Caja Sorpresa Premium</option>
+                    <option value="maqueta-escolar">Maqueta Escolar</option>
+                </select>
+
+                <h3>Materiales</h3>
+                <div class="selector-material-group">
+                    <select id="material">
+                        <option value="">Seleccione material para agregar</option>
+                        <option value="Chocolate Ferrero">Chocolate Ferrero</option>
+                        <option value="Chocolate Nacional">Chocolate Nacional</option>
+                        <option value="Bombones">Bombones</option>
+                        <option value="Rosa Natural">Rosa Natural</option>
+                        <option value="Rosa Artificial">Rosa Artificial</option>
+                        <option value="Globo Metálico">Globo Metálico</option>
+                        <option value="Globo Látex">Globo Látex</option>
+                        <option value="Caja Pequeña">Caja Pequeña</option>
+                        <option value="Caja Mediana">Caja Mediana</option>
+                        <option value="Caja Grande">Caja Grande</option>
+                        <option value="Papel Kraft">Papel Kraft</option>
+                        <option value="Cinta Decorativa">Cinta Decorativa</option>
+                        <option value="Cartulina">Cartulina</option>
+                        <option value="Foami">Foami</option>
+                        <option value="Cartón Pluma">Cartón Pluma</option>
+                        <option value="Acetato">Acetato</option>
+                        <option value="Impresión Color">Impresión Color</option>
+                        <option value="Impresión B/N">Impresión B/N</option>
+                        <option value="Silicona Barra">Silicona Barra</option>
+                    </select>
+                    <button type="button" class="action" id="btn-agregar-material">+ Agregar Material</button>
+                </div>
+
+                <div id="listaMateriales">
+                    </div>
+
+                <h3>Mano de Obra</h3>
+                <input id="horas" type="number" placeholder="Horas Trabajadas" min="0">
+                <input id="valorHora" type="number" placeholder="Valor por Hora" min="0" step="0.1">
+
+                <h3>Otros Costos</h3>
+                <input id="transporte" type="number" placeholder="Valor Transporte" min="0" step="0.1">
+                <input id="otros" type="number" placeholder="Otros Gastos" min="0" step="0.1">
+
+                <h3>Porcentaje de Utilidad General</h3>
+                <input id="utilidad" type="number" value="40" min="0">
+
+                <div class="resultado">
+                    <p>Costo Real: <b id="costo">$0.00</b></p>
+                    <p>Ganancia Proyectos + Materiales: <b id="ganancia">$0.00</b></p>
+                    <p>Precio Venta Final: <b id="precio">$0.00</b></p>
+                </div>
+
+                <br>
+                <div class="form-actions">
+                    <button class="action" id="btn-guardar">Guardar Registro</button>
+                    <button class="action" id="btn-pdf" style="background: #e74c3c; color: white;">Generar PDF</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="historial" class="hidden">
+            <div class="card">
+                <h2>Historial de Creaciones</h2>
+                <div id="historialDatos">
+                    </div>
+            </div>
+        </section>
+
+        <section id="config" class="hidden">
+            <div class="card">
+                <h2>Configuración</h2>
+                <p>Aplicación COSTE JANANDRED v1.0 (PWA de escritorio y iPhone)</p>
+                <div class="pwa-instructions">
+                    <h3>Instrucciones de Instalación en iOS (Safari):</h3>
+                    <ol>
+                        <li>Presiona el botón de <strong>Compartir</strong> (icono del cuadrado con la flecha hacia arriba).</li>
+                        <li>Selecciona la opción <strong>Agregar a pantalla de inicio</strong>.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
