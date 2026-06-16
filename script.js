@@ -253,12 +253,23 @@ function calcular() {
     const h = Number(document.getElementById("horas").value || 0);
     const vh = Number(document.getElementById("valorHora").value || 0);
     const manoObra = h * vh;
-
     const transp = Number(document.getElementById("transporte").value || 0);
+
+    const servicios = Number(document.getElementById("servicios").value || 0);
+
+    const indirectos = Number(document.getElementById("indirectos").value || 0);
+
     const otrosGastos = Number(document.getElementById("otros").value || 0);
 
-    const costoRealTotal = costoMateriales + manoObra + transp + otrosGastos;
 
+const costoRealTotal = 
+costoMateriales + 
+manoObra + 
+transp + 
+servicios + 
+indirectos + 
+otrosGastos;
+    
     const pctUtilidad = Number(document.getElementById("utilidad").value || 0);
     const gananciaProyectoBase = costoRealTotal * (pctUtilidad / 100);
 
