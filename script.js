@@ -328,6 +328,8 @@ function limpiarFormulario() {
     document.getElementById("horas").value = "";
     document.getElementById("valorHora").value = "";
     document.getElementById("transporte").value = "";
+    document.getElementById("servicios").value = "";
+    document.getElementById("indirectos").value = "";
     document.getElementById("otros").value = "";
     document.getElementById("utilidad").value = "40";
     document.getElementById("costo").innerText = "$0.00";
