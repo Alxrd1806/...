@@ -192,11 +192,14 @@ function abrirModulo(id) {
 }
 
 document.getElementById("btn-agregar-material").addEventListener("click", () => {
-    const nombre = document.getElementById("material").value;
-    if (!nombre || preciosBase[nombre] === undefined) return;
-    renderizarFilaMaterial(nombre, 1, preciosBase[nombre], 0);
+    const nombre = document.getElementById("material").value.trim();
+    if (!nombre) return; 
+    
+    const costoInicial = preciosBase[nombre] !== undefined ? preciosBase[nombre] : 0.00;
+    
+    renderizarFilaMaterial(nombre, 1, costoInicial, 0);
     calcular();
-    document.getElementById("material").value = "";
+    document.getElementById("material").value = ""; // Limpia el buscador
 });
 
 document.getElementById("plantilla").addEventListener("change", (e) => {
