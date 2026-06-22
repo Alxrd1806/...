@@ -1,4 +1,4 @@
-const CACHE_NAME = "janandred-cache-v1";
+const CACHE_NAME = "janandred-cache-v2";
 const ASSETS = [
   "index.html",
   "style.css",
@@ -10,7 +10,7 @@ self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(ASSETS);
-    })
+    }).then(() => self.skipWaiting())
   );
 });
 
@@ -24,14 +24,24 @@ self.addEventListener("activate", (e) => {
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
 });
 
 self.addEventListener("fetch", (e) => {
   e.respondWith(
-    caches.match(e.request).then((response) => {
-      return response || fetch(e.request);
-    })
+    fetch(e.request)
+      .then((response) => {
+        if (response && response.status === 200) {
+          const responseCopy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(e.request, responseCopy);
+          });
+        }
+        return response;
+      })
+      .catch(() => {
+        return caches.match(e.request);
+      })
   );
 });
