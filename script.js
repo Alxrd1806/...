@@ -444,7 +444,22 @@ if ("serviceWorker" in navigator) {
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
         navigator.serviceWorker.register("service-worker.js")
-            .then(reg => console.log("Service Worker registrado con éxito", reg))
+            .then(reg => {
+                console.log("Service Worker registrado con éxito", reg);
+                
+                // Si hay una actualización lista en segundo plano, la fuerza a activarse
+                reg.onupdatefound = () => {
+                    const installingWorker = reg.installing;
+                    installingWorker.onstatechange = () => {
+                        if (installingWorker.state === "installed") {
+                            if (navigator.serviceWorker.controller) {
+                                console.log("Nueva versión detectada. Recargando...");
+                                window.location.reload();
+                            }
+                        }
+                    };
+                };
+            })
             .catch(err => console.error("Error al registrar el Service Worker", err));
     });
 }
