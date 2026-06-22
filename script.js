@@ -193,8 +193,9 @@ function abrirModulo(id) {
 
 document.getElementById("btn-agregar-material").addEventListener("click", () => {
     const nombre = document.getElementById("material").value.trim();
-    if (!nombre) return; 
+    if (!nombre) return; // Si está vacío no hace nada
     
+    // Si existe en la base de datos toma su costo ($1.00), si es nuevo empieza en $0.00
     const costoInicial = preciosBase[nombre] !== undefined ? preciosBase[nombre] : 0.00;
     
     renderizarFilaMaterial(nombre, 1, costoInicial, 0);
