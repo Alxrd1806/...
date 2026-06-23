@@ -1,156 +1,40 @@
 const preciosBase = {
-    "Dulces": 1.00,
-    "Rosa Natural": 1.00,
-    "Rosa Artificial": 1.00,
-    "Follaje": 1.00,
-    "Flor Seca": 1.00,
-    "Globo Látex": 1.00,
-    "Globo Metálico": 1.00,
-    "Globo Burbuja": 1.00,
-    "Globo Transparente": 1.00,
-    "Globo Personalizado": 1.00,
-    "Globo Número": 1.00,
-    "Globo Letra": 1.00,
-    "Globo Corazón": 1.00,
-    "Globo Estrella": 1.00,
-    "Globo Cromado": 1.00,
-    "Caja Pequeña": 1.00,
-    "Caja Mediana": 1.00,
-    "Caja Grande": 1.00,
-    "Caja Corazón": 1.00,
-    "Caja Acrílica": 1.00,
-    "Caja Transparente": 1.00,
-    "Caja Sorpresa": 1.00,
-    "Bolsa Kraft": 1.00,
-    "Bolsa Regalo": 1.00,
-    "Bolsa Organza": 1.00,
-    "Bolsa Celofán": 1.00,
-    "Bolsa Papel": 1.00,
-    "Canasta": 1.00,
-    "Ancheta": 1.00,
-    "Cofre Decorativo": 1.00,
-    "Papel Vinil": 1.00,
-    "Papel Vinipel": 1.00,
-    "Papel Crepé": 1.00,
-    "Papel Seda": 1.00,
-    "Papel Kraft": 1.00,
-    "Papel Celofán": 1.00,
-    "Papel Coreano": 1.00,
-    "Papel Decorativo": 1.00,
-    "Papel Metalizado": 1.00,
-    "Papel Espejo": 1.00,
-    "Papel Perlado": 1.00,
-    "Papel Adhesivo": 1.00,
-    "Papel Scrapbook": 1.00,
-    "Moños": 1.00,
-    "Cintas": 1.00,
-    "Lazos": 1.00,
-    "Yute": 1.00,
-    "Encaje": 1.00,
-    "Perlas": 1.00,
-    "Diamantes Acrílicos": 1.00,
-    "Escarcha": 1.00,
-    "Glitter": 1.00,
-    "Confeti": 1.00,
-    "Plumas Decorativas": 1.00,
-    "Pompones": 1.00,
-    "Stickers": 1.00,
-    "Etiquetas": 1.00,
-    "Tarjetas": 1.00,
-    "Tarjetas Personalizadas": 1.00,
-    "Foami": 1.00,
-    "Foami Escarchado": 1.00,
-    "Cartulina": 1.00,
-    "Cartón Paja": 1.00,
-    "Cartón Pluma": 1.00,
-    "Cartón Gris": 1.00,
-    "Acetato": 1.00,
-    "MDF": 1.00,
-    "Madera Balsa": 1.00,
-    "Icopor": 1.00,
-    "Espuma Floral": 1.00,
-    "Corcho": 1.00,
-    "Silicona Barra": 1.00,
-    "Silicona Líquida": 1.00,
-    "Pegamento Blanco": 1.00,
-    "Pegamento Instantáneo": 1.00,
-    "Cinta Doble Faz": 1.00,
-    "Cinta Transparente": 1.00,
-    "Cinta Enmascarar": 1.00,
-    "Cinta Decorativa": 1.00,
-    "Impresión Color": 1.00,
-    "Impresión Blanco y Negro": 1.00,
-    "Papel Fotográfico": 1.00,
-    "Fotografía": 1.00,
-    "Laminado": 1.00,
-    "Taza Blanca": 1.00,
-    "Taza Mágica": 1.00,
-    "Taza de Color": 1.00,
-    "Vaso Plástico": 1.00,
-    "Vaso de Vidrio": 1.00,
-    "Vaso Térmico": 1.00,
-    "Copa": 1.00,
-    "Botella Decorativa": 1.00,
-    "Termo": 1.00,
-    "Agua": 1.00,
-    "Jugo": 1.00,
-    "Gaseosa": 1.00,
-    "Café": 1.00,
-    "Té": 1.00,
-    "Energizante": 1.00,
-    "Vino": 1.00,
-    "Cerveza": 1.00,
-    "Whisky": 1.00,
-    "Licor": 1.00,
-    "Peluche Pequeño": 1.00,
-    "Peluche Mediano": 1.00,
-    "Peluche Grande": 1.00,
-    "Llavero": 1.00,
-    "Portarretrato": 1.00,
-    "Vela Aromática": 1.00,
-    "Perfume": 1.00,
-    "Loción": 1.00,
-    "Maquillaje": 1.00,
-    "Accesorios": 1.00,
-    "Frutas": 1.00,
-    "Fresas": 1.00,
-    "Uvas": 1.00,
-    "Manzanas": 1.00,
-    "Bananos": 1.00,
-    "Quesos": 1.00,
-    "Jamón": 1.00,
-    "Galletas": 1.00,
-    "Snacks": 1.00,
-    "Marcador": 1.00,
-    "Esfero": 1.00,
-    "Lápiz": 1.00,
-    "Colores": 1.00,
-    "Pintura Acrílica": 1.00,
-    "Vinilo": 1.00,
-    "Pinceles": 1.00,
-    "Regla": 1.00,
-    "Tijeras": 1.00,
-    "Bisturí": 1.00,
-    "Luces LED": 1.00,
-    "Tira LED": 1.00,
-    "Baterías": 1.00,
-    "Cargador": 1.00,
-    "Parlante": 1.00,
-    "Palitos de Balso": 1.00,
-    "Palitos de Paleta": 1.00,
-    "Palitos de Pincho": 1.00,
-    "Arena Decorativa": 1.00,
-    "Césped Artificial": 1.00,
-    "Gasolina": 1.00,
-    "Parqueadero": 1.00,
-    "Peajes": 1.00,
-    "Domicilio": 1.00,
-    "Envío": 1.00
+    "Dulces": 1.50, "Rosa Natural": 2.50, "Rosa Artificial": 1.00, "Follaje": 0.75, "Flor Seca": 1.25,
+    "Globo Látex": 0.30, "Globo Metálico": 1.50, "Globo Burbuja": 2.50, "Globo Transparente": 2.00,
+    "Globo Personalizado": 4.00, "Globo Número": 2.00, "Globo Letra": 2.00, "Globo Corazón": 1.50,
+    "Globo Estrella": 1.50, "Globo Cromado": 0.60, "Caja Pequeña": 1.50, "Caja Mediana": 2.50,
+    "Caja Grande": 4.00, "Caja Corazón": 3.50, "Caja Acrílica": 5.00, "Caja Transparente": 4.50,
+    "Caja Sorpresa": 6.00, "Bolsa Kraft": 0.50, "Bolsa Regalo": 1.25, "Bolsa Organza": 0.40,
+    "Bolsa Celofán": 0.20, "Bolsa Papel": 0.80, "Canasta": 5.50, "Ancheta": 7.00, "Cofre Decorativo": 8.00,
+    "Papel Vinil": 2.00, "Papel Vinipel": 1.50, "Papel Crepé": 0.60, "Papel Seda": 0.25, "Papel Kraft": 0.40,
+    "Papel Celofán": 0.35, "Papel Coreano": 1.20, "Papel Decorativo": 0.80, "Papel Metalizado": 1.00,
+    "Papel Espejo": 1.50, "Papel Perlado": 1.30, "Papel Adhesivo": 0.90, "Papel Scrapbook": 1.10,
+    "Moños": 0.40, "Cintas": 0.60, "Lazos": 0.50, "Yute": 1.25, "Encaje": 1.50, "Perlas": 2.00,
+    "Diamantes Acrílicos": 1.80, "Escarcha": 0.50, "Glitter": 1.20, "Confeti": 0.40, "Plumas Decorativas": 1.50,
+    "Pompones": 0.80, "Stickers": 0.25, "Etiquetas": 0.15, "Tarjetas": 0.50, "Tarjetas Personalizadas": 1.50,
+    "Foami": 0.40, "Foami Escarchado": 0.75, "Cartulina": 0.30, "Cartón Paja": 0.60, "Cartón Pluma": 2.50,
+    "Cartón Gris": 1.20, "Acetato": 0.90, "MDF": 3.00, "Madera Balsa": 1.80, "Icopor": 1.00,
+    "Espuma Floral": 1.50, "Corcho": 2.20, "Silicona Barra": 0.15, "Silicona Líquida": 2.50,
+    "Pegamento Blanco": 1.20, "Pegamento Instantáneo": 0.85, "Cinta Doble Faz": 1.50, "Cinta Transparente": 0.60,
+    "Cinta Enmascarar": 1.10, "Cinta Decorativa": 0.95, "Impresión Color": 0.50, "Impresión Blanco y Negro": 0.20,
+    "Papel Fotográfico": 0.80, "Fotografía": 0.50, "Laminado": 1.00, "Taza Blanca": 2.50, "Taza Mágica": 5.00,
+    "Taza de Color": 3.00, "Vaso Plástico": 0.15, "Vaso de Vidrio": 1.50, "Vaso Térmico": 4.50, "Copa": 2.00,
+    "Botella Decorativa": 2.50, "Termo": 6.00, "Agua": 0.50, "Jugo": 0.80, "Gaseosa": 0.75, "Café": 1.20,
+    "Té": 1.00, "Energizante": 1.75, "Vino": 12.00, "Cerveza": 1.50, "Whisky": 35.00, "Licor": 15.00,
+    "Peluche Pequeño": 4.00, "Peluche Mediano": 8.00, "Peluche Grande": 18.00, "Llavero": 1.50,
+    "Portarretrato": 3.50, "Vela Aromática": 2.50, "Perfume": 20.00, "Loción": 10.00, "Maquillaje": 15.00,
+    "Accesorios": 5.00, "Frutas": 3.00, "Fresas": 2.50, "Uvas": 2.00, "Manzanas": 1.50, "Bananos": 0.80,
+    "Quesos": 4.00, "Jamón": 3.00, "Galletas": 1.20, "Snacks": 1.50, "Marcador": 0.80, "Esfero": 0.40,
+    "Lápiz": 0.25, "Colores": 3.50, "Pintura Acrílica": 1.50, "Vinilo": 1.00, "Pinceles": 2.00, "Regla": 0.50,
+    "Tijeras": 1.20, "Bisturí": 1.00, "Luces LED": 2.50, "Tira LED": 5.00, "Baterías": 1.50, "Cargador": 4.00,
+    "Parlante": 12.00, "Palitos de Balso": 0.80, "Palitos de Paleta": 0.50, "Palitos de Pincho": 0.40,
+    "Arena Decorativa": 1.50, "Césped Artificial": 3.50, "Gasolina": 5.00, "Parqueadero": 2.00, "Peajes": 1.00,
+    "Domicilio": 3.00, "Envío": 5.00
 };
 
 const plantillas = {
     "caja-premium": [
-        { nombre: "Chocolate Ferrero", cantidad: 12 },
+        { nombre: "Dulces", cantidad: 12 },
         { nombre: "Rosa Natural", cantidad: 6 },
         { nombre: "Caja Mediana", cantidad: 1 },
         { nombre: "Globo Metálico", cantidad: 1 }
@@ -165,12 +49,8 @@ const plantillas = {
 let datos = JSON.parse(localStorage.getItem("coste")) || [];
 
 const navBotones = {
-    "btn-inicio": "inicio",
-    "btn-crear": "crear",
-    "btn-historial": "historial",
-    "btn-config": "config",
-    "quick-crear": "crear",
-    "quick-historial": "historial"
+    "btn-inicio": "inicio", "btn-crear": "crear", "btn-historial": "historial", "btn-config": "config",
+    "quick-crear": "crear", "quick-historial": "historial"
 };
 
 Object.keys(navBotones).forEach(btnId => {
@@ -182,7 +62,6 @@ Object.keys(navBotones).forEach(btnId => {
 function abrirModulo(id) {
     document.querySelectorAll("main section").forEach(sec => sec.classList.add("hidden"));
     document.getElementById(id).classList.remove("hidden");
-    
     document.querySelectorAll("nav button").forEach(btn => btn.classList.remove("active"));
     
     if (id === "inicio") document.getElementById("btn-inicio")?.classList.add("active");
@@ -191,16 +70,113 @@ function abrirModulo(id) {
     if (id === "config") document.getElementById("btn-config")?.classList.add("active");
 }
 
+// FUNCIÓN PARA ELIMINAR TILDES Y NORMALIZAR TEXTO
+function limpiarTexto(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+}
+
+// LÓGICA DE BÚSQUEDA ROBUSTA: SINCRONIZACIÓN PERFECTA DE COINCIDENCIAS
+document.getElementById("buscar-material")?.addEventListener("input", (e) => {
+    const termino = limpiarTexto(e.target.value);
+    const selector = document.getElementById("material");
+    const opciones = document.querySelectorAll("#material option");
+    let coincidencias = [];
+
+    opciones.forEach((opt, idx) => {
+        if (idx === 0) return; // Saltamos el placeholder inicial
+        const textoOpcion = limpiarTexto(opt.text);
+        
+        if (textoOpcion.includes(termino)) {
+            opt.style.display = "block";
+            coincidencias.push(opt);
+        } else {
+            opt.style.display = "none";
+        }
+    });
+
+    // SELECCIÓN AUTOMÁTICA: Vincula el valor real del catálogo de inmediato
+    if (coincidencias.length === 1) {
+        selector.value = coincidencias[0].value;
+        selector.options[0].text = "Material encontrado ✔";
+        selector.options[0].value = coincidencias[0].value; // Sincroniza el valor para el botón
+    } 
+    // Si es un material NUEVO real
+    else if (termino.length > 0 && coincidencias.length === 0) {
+        selector.options[0].text = `➕ Agregar nuevo: "${e.target.value}"`;
+        selector.options[0].value = e.target.value;
+        selector.value = e.target.value;
+    } 
+    // Si se limpia el buscador o hay múltiples opciones flotantes
+    else {
+        selector.options[0].text = "Seleccione material para agregar";
+        selector.options[0].value = "";
+        selector.value = "";
+    }
+});
+
+// ACCIÓN CON ENTER EN EL BUSCADOR
+document.getElementById("buscar-material")?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        document.getElementById("btn-agregar-material").click();
+    }
+});
+
+// LÓGICA ÚNICA PARA INYECTAR EL MATERIAL (COMPATIBLE CON CLIC DIRECTO Y BUSCADOR)
 document.getElementById("btn-agregar-material").addEventListener("click", () => {
-    const nombre = document.getElementById("material").value.trim();
-    if (!nombre) return; // Si está vacío no hace nada
+    const buscador = document.getElementById("buscar-material");
+    const selector = document.getElementById("material");
     
-    // Si existe en la base de datos toma su costo ($1.00), si es nuevo empieza en $0.00
-    const costoInicial = preciosBase[nombre] !== undefined ? preciosBase[nombre] : 0.00;
+    let nombre = "";
+
+    // 1. Si el usuario seleccionó un material directamente de la lista (abriendo el desplegable)
+    if (selector && selector.value && selector.value !== "" && selector.options[0].text !== "Material encontrado ✔") {
+        nombre = selector.value.trim();
+    }
+    // 2. Si el buscador automático ya aisló y seleccionó el material correcto
+    else if (selector && selector.options[0].text === "Material encontrado ✔" && selector.value) {
+        nombre = selector.value.trim();
+    } 
+    // 3. Si no hay coincidencias y es un material manual totalmente nuevo
+    else if (buscador && buscador.value.trim()) {
+        nombre = buscador.value.trim();
+    }
     
-    renderizarFilaMaterial(nombre, 1, costoInicial, 0);
+    if (!nombre || nombre === "Material encontrado ✔") return;
+
+    // Buscamos si el nombre existe en las llaves del catálogo original para heredar su precio correcto
+    const claveEncontrada = Object.keys(preciosBase).find(key => limpiarTexto(key) === limpiarTexto(nombre));
+    const nombreFinal = claveEncontrada !== undefined ? claveEncontrada : nombre;
+    const costoInicial = claveEncontrada !== undefined ? preciosBase[claveEncontrada] : 1.00;
+
+    // CONTROL DE DUPLICADOS INMEDIATOS
+    const filasParaRevisar = document.querySelectorAll("#listaMateriales .mat-nombre");
+    let yaExiste = false;
+    filasParaRevisar.forEach(fila => {
+        if (fila.innerText.trim().toLowerCase() === nombreFinal.toLowerCase()) {
+            yaExiste = true;
+        }
+    });
+
+    if (yaExiste) {
+        if (buscador) buscador.value = "";
+        selector.value = "";
+        return;
+    }
+
+    renderizarFilaMaterial(nombreFinal, 1, costoInicial, 0);
     calcular();
-    document.getElementById("material").value = ""; // Limpia el buscador
+
+    // Reset completo de la barra y el menú para la próxima búsqueda
+    if (buscador) buscador.value = "";
+    selector.options[0].text = "Seleccione material para agregar";
+    selector.options[0].value = "";
+    selector.value = "";
+    document.querySelectorAll("#material option").forEach(opt => opt.style.display = "block");
 });
 
 document.getElementById("plantilla").addEventListener("change", (e) => {
@@ -209,7 +185,7 @@ document.getElementById("plantilla").addEventListener("change", (e) => {
     
     document.getElementById("listaMateriales").innerHTML = "";
     plantillas[key].forEach(m => {
-        renderizarFilaMaterial(m.nombre, m.cantidad, preciosBase[m.nombre], 0);
+        renderizarFilaMaterial(m.nombre, m.cantidad, preciosBase[m.nombre] || 1.00, 0);
     });
     calcular();
 });
@@ -258,21 +234,11 @@ function calcular() {
     const vh = Number(document.getElementById("valorHora").value || 0);
     const manoObra = h * vh;
     const transp = Number(document.getElementById("transporte").value || 0);
-
     const servicios = Number(document.getElementById("servicios").value || 0);
-
     const indirectos = Number(document.getElementById("indirectos").value || 0);
-
     const otrosGastos = Number(document.getElementById("otros").value || 0);
 
-
-const costoRealTotal = 
-costoMateriales + 
-manoObra + 
-transp + 
-servicios + 
-indirectos + 
-otrosGastos;
+    const costoRealTotal = costoMateriales + manoObra + transp + servicios + indirectos + otrosGastos;
     
     const pctUtilidad = Number(document.getElementById("utilidad").value || 0);
     const gananciaProyectoBase = costoRealTotal * (pctUtilidad / 100);
@@ -304,16 +270,7 @@ document.getElementById("btn-guardar").addEventListener("click", () => {
     const gananciaText = document.getElementById("ganancia").innerText;
     const precioText = document.getElementById("precio").innerText;
 
-    datos.push({
-        codigo,
-        cliente,
-        producto,
-        fecha,
-        costo: costoText,
-        ganancia: gananciaText,
-        precio: precioText
-    });
-
+    datos.push({ codigo, cliente, producto, fecha, costo: costoText, ganancia: gananciaText, precio: precioText });
     localStorage.setItem("coste", JSON.stringify(datos));
     
     limpiarFormulario();
@@ -422,7 +379,7 @@ document.getElementById("btn-pdf").addEventListener("click", () => {
             </div>
             <script>
                 window.onload = function() { window.print(); window.close(); }
-            </script>
+            <\/script>
         </body>
         </html>
     `;
@@ -438,24 +395,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("service-worker.js");
-}
-
-if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
         navigator.serviceWorker.register("service-worker.js")
             .then(reg => {
                 console.log("Service Worker registrado con éxito", reg);
-                
-                // Si hay una actualización lista en segundo plano, la fuerza a activarse
                 reg.onupdatefound = () => {
                     const installingWorker = reg.installing;
                     installingWorker.onstatechange = () => {
-                        if (installingWorker.state === "installed") {
-                            if (navigator.serviceWorker.controller) {
-                                console.log("Nueva versión detectada. Recargando...");
-                                window.location.reload();
-                            }
+                        if (installingWorker.state === "installed" && navigator.serviceWorker.controller) {
+                            window.location.reload();
                         }
                     };
                 };
